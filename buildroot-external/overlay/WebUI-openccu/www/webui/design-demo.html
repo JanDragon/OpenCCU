@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCCU Modern Design System Demo</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/webui/css/extern/main.min.css">
+    <link rel="stylesheet" href="/webui/css/extern/hmBootstrap.css">
+    
+    <!-- OpenCCU Modern CSS -->
+    <link rel="stylesheet" href="/webui/css/openccu-modern.css">
+    
+    <style>
+        body {
+            padding: 2rem;
+            background-color: #f8fafc;
+        }
+        .demo-section {
+            margin-bottom: 3rem;
+        }
+        .demo-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        .demo-subtitle {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #334155;
+        }
+        .component-preview {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="openccu-modern">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: #1e3a8a;">
+            OpenCCU Modern Design System
+        </h1>
+        <p style="color: #64748b; margin-bottom: 2rem;">
+            A showcase of the modern, responsive design components for OpenCCU WebUI
+        </p>
+
+        <!-- Color Palette -->
+        <section class="demo-section">
+            <h2 class="demo-title">Color Palette</h2>
+            <div class="component-preview">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                    <div>
+                        <div style="background-color: #1e3a8a; height: 80px; border-radius: 0.5rem; margin-bottom: 0.5rem;"></div>
+                        <div style="font-size: 0.875rem; font-weight: 500;">Primary</div>
+                        <div style="font-size: 0.75rem; color: #64748b;">#1e3a8a</div>
+                    </div>
+                    <div>
+                        <div style="background-color: #10b981; height: 80px; border-radius: 0.5rem; margin-bottom: 0.5rem;"></div>
+                        <div style="font-size: 0.875rem; font-weight: 500;">Success</div>
+                        <div style="font-size: 0.75rem; color: #64748b;">#10b981</div>
+                    </div>
+                    <div>
+                        <div style="background-color: #f59e0b; height: 80px; border-radius: 0.5rem; margin-bottom: 0.5rem;"></div>
+                        <div style="font-size: 0.875rem; font-weight: 500;">Warning</div>
+                        <div style="font-size: 0.75rem; color: #64748b;">#f59e0b</div>
+                    </div>
+                    <div>
+                        <div style="background-color: #ef4444; height: 80px; border-radius: 0.5rem; margin-bottom: 0.5rem;"></div>
+                        <div style="font-size: 0.875rem; font-weight: 500;">Danger</div>
+                        <div style="font-size: 0.75rem; color: #64748b;">#ef4444</div>
+                    </div>
+                    <div>
+                        <div style="background-color: #3b82f6; height: 80px; border-radius: 0.5rem; margin-bottom: 0.5rem;"></div>
+                        <div style="font-size: 0.875rem; font-weight: 500;">Info</div>
+                        <div style="font-size: 0.75rem; color: #64748b;">#3b82f6</div>
+                    </div>
+                    <div>
+                        <div style="background-color: #64748b; height: 80px; border-radius: 0.5rem; margin-bottom: 0.5rem;"></div>
+                        <div style="font-size: 0.875rem; font-weight: 500;">Secondary</div>
+                        <div style="font-size: 0.75rem; color: #64748b;">#64748b</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="demo-section">
+            <h2 class="demo-title">Buttons</h2>
+            <div class="component-preview">
+                <h3 class="demo-subtitle">Standard Buttons</h3>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <button class="openccu-btn openccu-btn-primary">Primary</button>
+                    <button class="openccu-btn openccu-btn-secondary">Secondary</button>
+                    <button class="openccu-btn openccu-btn-success">Success</button>
+                    <button class="openccu-btn openccu-btn-warning">Warning</button>
+                    <button class="openccu-btn openccu-btn-danger">Danger</button>
+                </div>
+                
+                <h3 class="demo-subtitle">Button Sizes</h3>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+                    <button class="openccu-btn openccu-btn-primary openccu-btn-sm">Small</button>
+                    <button class="openccu-btn openccu-btn-primary">Default</button>
+                    <button class="openccu-btn openccu-btn-primary openccu-btn-lg">Large</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="demo-section">
+            <h2 class="demo-title">Cards</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                <div class="openccu-card">
+                    <div class="openccu-card-header">Device Status</div>
+                    <div class="openccu-card-body">
+                        <p>All systems operational. 12 devices connected.</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="openccu-badge openccu-badge-success">Online</span>
+                            <span class="openccu-badge openccu-badge-primary">12 Devices</span>
+                        </div>
+                    </div>
+                    <div class="openccu-card-footer">
+                        <button class="openccu-btn openccu-btn-primary openccu-btn-sm">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="openccu-card">
+                    <div class="openccu-card-header">System Information</div>
+                    <div class="openccu-card-body">
+                        <p><strong>Version:</strong> OpenCCU 3.85.5</p>
+                        <p><strong>Uptime:</strong> 5 days, 3 hours</p>
+                        <p><strong>Memory:</strong> 45% used</p>
+                    </div>
+                    <div class="openccu-card-footer">
+                        <button class="openccu-btn openccu-btn-secondary openccu-btn-sm">Settings</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Badges -->
+        <section class="demo-section">
+            <h2 class="demo-title">Badges</h2>
+            <div class="component-preview">
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <span class="openccu-badge openccu-badge-primary">Primary</span>
+                    <span class="openccu-badge openccu-badge-success">Success</span>
+                    <span class="openccu-badge openccu-badge-warning">Warning</span>
+                    <span class="openccu-badge openccu-badge-danger">Danger</span>
+                    <span class="openccu-badge openccu-badge-secondary">Secondary</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts -->
+        <section class="demo-section">
+            <h2 class="demo-title">Alerts</h2>
+            <div style="display: grid; gap: 1rem;">
+                <div class="openccu-alert openccu-alert-success">
+                    <strong>Success!</strong> Your changes have been saved successfully.
+                </div>
+                <div class="openccu-alert openccu-alert-info">
+                    <strong>Info:</strong> System update available. Click here to learn more.
+                </div>
+                <div class="openccu-alert openccu-alert-warning">
+                    <strong>Warning!</strong> Your storage is running low. Please free up some space.
+                </div>
+                <div class="openccu-alert openccu-alert-danger">
+                    <strong>Error!</strong> Failed to connect to device. Please check your connection.
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms -->
+        <section class="demo-section">
+            <h2 class="demo-title">Form Elements</h2>
+            <div class="component-preview">
+                <div style="max-width: 500px;">
+                    <div class="openccu-form-group">
+                        <label class="openccu-form-label">Device Name</label>
+                        <input type="text" class="openccu-form-input" placeholder="Enter device name">
+                    </div>
+                    
+                    <div class="openccu-form-group">
+                        <label class="openccu-form-label">Device Type</label>
+                        <select class="openccu-form-select">
+                            <option>Select a type...</option>
+                            <option>Temperature Sensor</option>
+                            <option>Motion Detector</option>
+                            <option>Smart Switch</option>
+                        </select>
+                    </div>
+                    
+                    <div class="openccu-form-group">
+                        <label class="openccu-form-label">Description</label>
+                        <textarea class="openccu-form-textarea" rows="3" placeholder="Enter description"></textarea>
+                    </div>
+                    
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="openccu-btn openccu-btn-primary">Save Changes</button>
+                        <button class="openccu-btn openccu-btn-secondary">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table -->
+        <section class="demo-section">
+            <h2 class="demo-title">Tables</h2>
+            <div class="component-preview">
+                <table class="openccu-table">
+                    <thead>
+                        <tr>
+                            <th>Device Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Last Updated</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Living Room Sensor</td>
+                            <td>Temperature</td>
+                            <td><span class="openccu-badge openccu-badge-success">Online</span></td>
+                            <td>2 minutes ago</td>
+                            <td><button class="openccu-btn openccu-btn-primary openccu-btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Front Door Lock</td>
+                            <td>Smart Lock</td>
+                            <td><span class="openccu-badge openccu-badge-success">Online</span></td>
+                            <td>5 minutes ago</td>
+                            <td><button class="openccu-btn openccu-btn-primary openccu-btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Kitchen Light</td>
+                            <td>Smart Switch</td>
+                            <td><span class="openccu-badge openccu-badge-warning">Offline</span></td>
+                            <td>1 hour ago</td>
+                            <td><button class="openccu-btn openccu-btn-primary openccu-btn-sm">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bedroom Motion Detector</td>
+                            <td>Motion Sensor</td>
+                            <td><span class="openccu-badge openccu-badge-success">Online</span></td>
+                            <td>30 seconds ago</td>
+                            <td><button class="openccu-btn openccu-btn-primary openccu-btn-sm">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Loading States -->
+        <section class="demo-section">
+            <h2 class="demo-title">Loading States</h2>
+            <div class="component-preview">
+                <div style="display: flex; gap: 2rem; align-items: center;">
+                    <div>
+                        <div class="openccu-loading"></div>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #64748b;">Loading Spinner</p>
+                    </div>
+                    <div style="flex: 1;">
+                        <div class="openccu-skeleton" style="height: 20px; width: 100%; margin-bottom: 0.5rem;"></div>
+                        <div class="openccu-skeleton" style="height: 20px; width: 80%;"></div>
+                        <p style="margin-top: 0.5rem; font-size: 0.875rem; color: #64748b;">Skeleton Screen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="demo-section">
+            <h2 class="demo-title">Typography</h2>
+            <div class="component-preview">
+                <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem;">Heading 1</h1>
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem;">Heading 2</h2>
+                <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem;">Heading 3</h3>
+                <h4 style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">Heading 4</h4>
+                <p style="margin-bottom: 1rem;">
+                    This is a paragraph of text demonstrating the default typography. 
+                    The font family is a system font stack that looks native on all platforms.
+                </p>
+                <p style="font-size: 0.875rem; color: #64748b;">
+                    <small>This is smaller text, often used for captions or secondary information.</small>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer style="text-align: center; padding: 2rem 0; color: #64748b; border-top: 1px solid #e2e8f0; margin-top: 3rem;">
+            <p>OpenCCU Modern Design System - Version 1.0.0</p>
+            <p style="font-size: 0.875rem;">Licensed under Apache-2.0</p>
+        </footer>
+    </div>
+</body>
+</html>

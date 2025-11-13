@@ -1,9 +1,12 @@
 {
     "name": "webui-bootstrap",
     "version": "1.0.0",
-    "description": "",
+    "description": "OpenCCU Modern WebUI with Bootstrap 5",
     "main": "webui.js",
     "scripts": {
+        "build:css": "sass --style=compressed scss/main.scss css/extern/main.min.css",
+        "build:css:watch": "sass --watch --style=compressed scss/main.scss css/extern/main.min.css",
+        "build": "npm run build:css",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "ptweety",
