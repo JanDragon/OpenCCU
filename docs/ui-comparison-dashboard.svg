@@ -1,0 +1,202 @@
+<svg width="1400" height="900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 600; }
+      .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; }
+      .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 600; }
+    </style>
+    
+    <linearGradient id="old-header-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#192c6e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10204f;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="new-header-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="btn-primary" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="card-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+    
+    <filter id="hover-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="900" fill="#f0f0f0"/>
+  
+  <!-- Main Title -->
+  <text x="700" y="35" text-anchor="middle" class="title" font-size="24px" fill="#1e293b">
+    OpenCCU Dashboard Interface: Before vs After
+  </text>
+  
+  <!-- LEFT: BEFORE -->
+  <text x="350" y="70" text-anchor="middle" class="title" font-size="16px" fill="#ef4444">
+    ❌ BEFORE (Outdated Interface)
+  </text>
+  
+  <g id="old-interface">
+    <!-- Frame -->
+    <rect x="50" y="90" width="600" height="750" fill="white" stroke="#ccc" stroke-width="1"/>
+    
+    <!-- Old Header -->
+    <rect x="50" y="90" width="600" height="60" fill="url(#old-header-bg)"/>
+    <text x="80" y="127" class="title" font-size="16px" fill="white">OpenCCU - Device Management</text>
+    
+    <!-- Old Content -->
+    <rect x="50" y="150" width="600" height="690" fill="#e8e8e8"/>
+    
+    <!-- Old Device List (flat, no depth) -->
+    <rect x="70" y="170" width="560" height="80" fill="white" stroke="#999" stroke-width="1"/>
+    <text x="85" y="195" class="card-title" fill="#333">Living Room Sensor</text>
+    <text x="85" y="215" class="text" fill="#666">Temperature: 21.5°C</text>
+    <rect x="85" y="225" width="50" height="18" fill="#00c300" rx="2"/>
+    <text x="110" y="238" text-anchor="middle" class="text" font-size="10px" fill="white">Online</text>
+    
+    <rect x="70" y="260" width="560" height="80" fill="white" stroke="#999" stroke-width="1"/>
+    <text x="85" y="285" class="card-title" fill="#333">Front Door Lock</text>
+    <text x="85" y="305" class="text" fill="#666">Status: Locked</text>
+    <rect x="85" y="315" width="50" height="18" fill="#00c300" rx="2"/>
+    <text x="110" y="328" text-anchor="middle" class="text" font-size="10px" fill="white">Online</text>
+    
+    <rect x="70" y="350" width="560" height="80" fill="white" stroke="#999" stroke-width="1"/>
+    <text x="85" y="375" class="card-title" fill="#333">Kitchen Light</text>
+    <text x="85" y="395" class="text" fill="#666">Status: Off</text>
+    <rect x="85" y="405" width="50" height="18" fill="#ff0000" rx="2"/>
+    <text x="110" y="418" text-anchor="middle" class="text" font-size="10px" fill="white">Offline</text>
+    
+    <!-- Old Table -->
+    <text x="85" y="460" class="card-title" fill="#333">System Status</text>
+    <rect x="70" y="470" width="560" height="200" fill="white" stroke="#999" stroke-width="1"/>
+    
+    <!-- Table Header -->
+    <rect x="70" y="470" width="560" height="30" fill="#d0d0d0"/>
+    <line x1="70" y1="500" x2="630" y2="500" stroke="#999" stroke-width="1"/>
+    <text x="85" y="490" class="text" font-weight="600" fill="#333">Item</text>
+    <text x="350" y="490" class="text" font-weight="600" fill="#333">Value</text>
+    
+    <!-- Table Rows -->
+    <line x1="70" y1="530" x2="630" y2="530" stroke="#ccc" stroke-width="1"/>
+    <text x="85" y="520" class="text" fill="#555">CPU Usage</text>
+    <text x="350" y="520" class="text" fill="#555">45%</text>
+    
+    <line x1="70" y1="560" x2="630" y2="560" stroke="#ccc" stroke-width="1"/>
+    <text x="85" y="550" class="text" fill="#555">Memory</text>
+    <text x="350" y="550" class="text" fill="#555">2.1 GB / 4 GB</text>
+    
+    <line x1="70" y1="590" x2="630" y2="590" stroke="#ccc" stroke-width="1"/>
+    <text x="85" y="580" class="text" fill="#555">Uptime</text>
+    <text x="350" y="580" class="text" fill="#555">5 days</text>
+  </g>
+  
+  <!-- Issues with old design -->
+  <g transform="translate(80, 730)">
+    <text x="0" y="0" class="text" fill="#dc2626">✗ Flat design, no visual hierarchy</text>
+    <text x="0" y="18" class="text" fill="#dc2626">✗ Harsh borders, dated colors</text>
+    <text x="0" y="36" class="text" fill="#dc2626">✗ No hover effects or interactions</text>
+    <text x="0" y="54" class="text" fill="#dc2626">✗ Poor spacing and readability</text>
+    <text x="0" y="72" class="text" fill="#dc2626">✗ Not responsive or mobile-friendly</text>
+    <text x="0" y="90" class="text" fill="#dc2626">✗ Limited accessibility features</text>
+  </g>
+  
+  <!-- RIGHT: AFTER -->
+  <text x="1050" y="70" text-anchor="middle" class="title" font-size="16px" fill="#10b981">
+    ✅ AFTER (Modern Interface)
+  </text>
+  
+  <g id="new-interface">
+    <!-- Frame with modern styling -->
+    <rect x="750" y="90" width="600" height="750" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1" rx="4"/>
+    
+    <!-- Modern Header -->
+    <rect x="750" y="90" width="600" height="60" fill="url(#new-header-bg)" rx="4" filter="url(#card-shadow)"/>
+    <text x="780" y="127" class="title" font-size="16px" fill="white">OpenCCU - Device Management</text>
+    
+    <!-- Modern Content Area -->
+    <rect x="750" y="150" width="600" height="690" fill="#f8fafc"/>
+    
+    <!-- Modern Device Cards (with elevation) -->
+    <g filter="url(#card-shadow)">
+      <rect x="770" y="170" width="560" height="90" fill="white" stroke="#e2e8f0" stroke-width="1" rx="12"/>
+      <text x="790" y="195" class="card-title" fill="#1e293b">Living Room Sensor</text>
+      <line x1="790" y1="203" x2="1310" y2="203" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="790" y="225" class="text" fill="#64748b">Temperature: 21.5°C</text>
+      <rect x="790" y="235" width="60" height="20" fill="#10b981" rx="10"/>
+      <text x="820" y="249" text-anchor="middle" class="text" font-size="11px" font-weight="500" fill="white">Online</text>
+    </g>
+    
+    <g filter="url(#hover-shadow)" transform="translate(0, -2)">
+      <rect x="770" y="272" width="560" height="90" fill="white" stroke="#cbd5e1" stroke-width="1" rx="12"/>
+      <text x="790" y="297" class="card-title" fill="#1e293b">Front Door Lock</text>
+      <line x1="790" y1="305" x2="1310" y2="305" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="790" y="327" class="text" fill="#64748b">Status: Locked</text>
+      <rect x="790" y="337" width="60" height="20" fill="#10b981" rx="10"/>
+      <text x="820" y="351" text-anchor="middle" class="text" font-size="11px" font-weight="500" fill="white">Online</text>
+    </g>
+    
+    <g filter="url(#card-shadow)">
+      <rect x="770" y="376" width="560" height="90" fill="white" stroke="#e2e8f0" stroke-width="1" rx="12"/>
+      <text x="790" y="401" class="card-title" fill="#1e293b">Kitchen Light</text>
+      <line x1="790" y1="409" x2="1310" y2="409" stroke="#e2e8f0" stroke-width="2"/>
+      <text x="790" y="431" class="text" fill="#64748b">Status: Off</text>
+      <rect x="790" y="441" width="60" height="20" fill="#f59e0b" rx="10"/>
+      <text x="820" y="455" text-anchor="middle" class="text" font-size="11px" font-weight="500" fill="white">Offline</text>
+    </g>
+    
+    <!-- Modern Table Card -->
+    <g filter="url(#card-shadow)">
+      <rect x="770" y="490" width="560" height="220" fill="white" stroke="#e2e8f0" stroke-width="1" rx="12"/>
+      
+      <!-- Card Header -->
+      <text x="790" y="515" class="card-title" fill="#1e293b">System Status</text>
+      <line x1="790" y1="523" x2="1310" y2="523" stroke="#e2e8f0" stroke-width="2"/>
+      
+      <!-- Table Header -->
+      <rect x="770" y="533" width="560" height="35" fill="#f8fafc" rx="12"/>
+      <rect x="770" y="550" width="560" height="18" fill="#f8fafc"/>
+      <text x="790" y="555" class="text" font-weight="600" fill="#1e293b">Item</text>
+      <text x="1050" y="555" class="text" font-weight="600" fill="#1e293b">Value</text>
+      
+      <!-- Table Rows with hover effect -->
+      <line x1="790" y1="583" x2="1310" y2="583" stroke="#e2e8f0" stroke-width="1"/>
+      <rect x="770" y="568" width="560" height="30" fill="rgba(59, 130, 246, 0.03)"/>
+      <text x="790" y="588" class="text" fill="#334155">CPU Usage</text>
+      <text x="1050" y="588" class="text" fill="#64748b">45%</text>
+      
+      <line x1="790" y1="613" x2="1310" y2="613" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="790" y="608" class="text" fill="#334155">Memory</text>
+      <text x="1050" y="608" class="text" fill="#64748b">2.1 GB / 4 GB</text>
+      
+      <line x1="790" y1="643" x2="1310" y2="643" stroke="#e2e8f0" stroke-width="1"/>
+      <text x="790" y="638" class="text" fill="#334155">Uptime</text>
+      <text x="1050" y="638" class="text" fill="#64748b">5 days</text>
+      
+      <text x="790" y="668" class="text" fill="#334155">Devices Connected</text>
+      <text x="1050" y="668" class="text" fill="#64748b">12 active</text>
+    </g>
+  </g>
+  
+  <!-- New features list -->
+  <g transform="translate(780, 730)">
+    <text x="0" y="0" class="text" fill="#10b981">✓ Modern card-based design with depth</text>
+    <text x="0" y="18" class="text" fill="#10b981">✓ Subtle shadows and rounded corners</text>
+    <text x="0" y="36" class="text" fill="#10b981">✓ Smooth hover effects and transitions</text>
+    <text x="0" y="54" class="text" fill="#10b981">✓ Improved spacing and visual hierarchy</text>
+    <text x="0" y="72" class="text" fill="#10b981">✓ Responsive, mobile-first design</text>
+    <text x="0" y="90" class="text" fill="#10b981">✓ WCAG 2.1 AA accessible colors</text>
+  </g>
+  
+  <!-- Arrow -->
+  <g transform="translate(700, 450)">
+    <line x1="-25" y1="0" x2="25" y2="0" stroke="#3b82f6" stroke-width="3"/>
+    <polygon points="25,0 15,-8 15,8" fill="#3b82f6"/>
+  </g>
+</svg>
