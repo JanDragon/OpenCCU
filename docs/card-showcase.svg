@@ -1,0 +1,139 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 28px; font-weight: 600; fill: #1e293b; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: 500; fill: #64748b; }
+      .card-title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 20px; font-weight: 600; fill: #1e293b; }
+      .card-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; fill: #64748b; line-height: 1.5; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #64748b; }
+      .badge-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; font-weight: 500; fill: white; }
+      .btn-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 500; fill: white; }
+      
+      /* Shadow definitions */
+      .shadow-card { filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.1)); }
+      .shadow-card-hover { filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); }
+    </style>
+    
+    <linearGradient id="btn-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" class="title">OpenCCU Modern Card Components</text>
+  <text x="400" y="75" text-anchor="middle" class="subtitle">Structured, clean, and interactive containers</text>
+  
+  <!-- Card Example 1: Device Status -->
+  <g class="shadow-card">
+    <!-- Card Background -->
+    <rect x="50" y="110" width="340" height="220" rx="12" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+    
+    <!-- Card Header -->
+    <rect x="50" y="110" width="340" height="50" rx="12" fill="#f8fafc"/>
+    <rect x="50" y="148" width="340" height="12" fill="#f8fafc"/>
+    <line x1="50" y1="160" x2="390" y2="160" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="70" y="140" class="card-title">Device Status</text>
+    
+    <!-- Card Body -->
+    <text x="70" y="190" class="card-text">All systems operational.</text>
+    <text x="70" y="210" class="card-text">12 devices connected successfully.</text>
+    
+    <!-- Badges -->
+    <rect x="70" y="230" width="60" height="22" rx="11" fill="#10b981"/>
+    <text x="100" y="245" text-anchor="middle" class="badge-text">Online</text>
+    
+    <rect x="140" y="230" width="75" height="22" rx="11" fill="#1e3a8a"/>
+    <text x="177.5" y="245" text-anchor="middle" class="badge-text">12 Devices</text>
+    
+    <!-- Card Footer -->
+    <line x1="50" y1="270" x2="390" y2="270" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="70" y="285" width="100" height="32" rx="6" fill="url(#btn-gradient)"/>
+    <text x="120" y="305" text-anchor="middle" class="btn-text">View Details</text>
+  </g>
+  
+  <text x="220" y="350" text-anchor="middle" class="label">Standard Card - Normal State</text>
+  
+  <!-- Card Example 2: System Information (Hover State) -->
+  <g class="shadow-card-hover" transform="translate(0, -2)">
+    <!-- Card Background -->
+    <rect x="410" y="110" width="340" height="220" rx="12" fill="white" stroke="#cbd5e1" stroke-width="1"/>
+    
+    <!-- Card Header -->
+    <rect x="410" y="110" width="340" height="50" rx="12" fill="#f8fafc"/>
+    <rect x="410" y="148" width="340" height="12" fill="#f8fafc"/>
+    <line x1="410" y1="160" x2="750" x2="160" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="430" y="140" class="card-title">System Information</text>
+    
+    <!-- Card Body -->
+    <text x="430" y="190" class="card-text" font-weight="500">Version: <tspan fill="#64748b" font-weight="400">OpenCCU 3.85.5</tspan></text>
+    <text x="430" y="210" class="card-text" font-weight="500">Uptime: <tspan fill="#64748b" font-weight="400">5 days, 3 hours</tspan></text>
+    <text x="430" y="230" class="card-text" font-weight="500">Memory: <tspan fill="#64748b" font-weight="400">45% used</tspan></text>
+    
+    <!-- Progress Bar -->
+    <rect x="430" y="240" width="200" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="430" y="240" width="90" height="8" rx="4" fill="#3b82f6"/>
+    
+    <!-- Card Footer -->
+    <line x1="410" y1="270" x2="750" y2="270" stroke="#e2e8f0" stroke-width="1"/>
+    <rect x="430" y="285" width="80" height="32" rx="6" fill="#e2e8f0"/>
+    <text x="470" y="305" text-anchor="middle" class="btn-text" fill="#1e293b">Settings</text>
+  </g>
+  
+  <text x="580" y="350" text-anchor="middle" class="label">Card on Hover - Elevated (lifted 2px)</text>
+  
+  <!-- Alert Card Example -->
+  <text x="50" y="395" class="subtitle">Alert Variants</text>
+  
+  <!-- Success Alert -->
+  <g class="shadow-card">
+    <rect x="50" y="410" width="340" height="60" rx="8" fill="rgba(16, 185, 129, 0.1)" stroke="#10b981" stroke-width="0"/>
+    <rect x="50" y="410" width="4" height="60" rx="2" fill="#10b981"/>
+    <text x="65" y="433" class="card-text" font-weight="600" fill="#065f46">Success!</text>
+    <text x="65" y="453" class="card-text" fill="#065f46">Your changes have been saved successfully.</text>
+  </g>
+  
+  <!-- Warning Alert -->
+  <g class="shadow-card">
+    <rect x="410" y="410" width="340" height="60" rx="8" fill="rgba(245, 158, 11, 0.1)" stroke="#f59e0b" stroke-width="0"/>
+    <rect x="410" y="410" width="4" height="60" rx="2" fill="#f59e0b"/>
+    <text x="425" y="433" class="card-text" font-weight="600" fill="#92400e">Warning!</text>
+    <text x="425" y="453" class="card-text" fill="#92400e">Storage is running low. Please free up space.</text>
+  </g>
+  
+  <!-- Design Features -->
+  <text x="50" y="510" class="subtitle">Card Design Features</text>
+  
+  <g transform="translate(50, 525)">
+    <circle cx="0" cy="0" r="3" fill="#10b981"/>
+    <text x="10" y="5" class="card-text">12px border radius for modern look</text>
+  </g>
+  
+  <g transform="translate(50, 545)">
+    <circle cx="0" cy="0" r="3" fill="#10b981"/>
+    <text x="10" y="5" class="card-text">Subtle shadows for depth perception</text>
+  </g>
+  
+  <g transform="translate(50, 565)">
+    <circle cx="0" cy="0" r="3" fill="#10b981"/>
+    <text x="10" y="5" class="card-text">Hover animation (lift + shadow increase)</text>
+  </g>
+  
+  <g transform="translate(420, 525)">
+    <circle cx="0" cy="0" r="3" fill="#3b82f6"/>
+    <text x="10" y="5" class="card-text">Structured header/body/footer sections</text>
+  </g>
+  
+  <g transform="translate(420, 545)">
+    <circle cx="0" cy="0" r="3" fill="#3b82f6"/>
+    <text x="10" y="5" class="card-text">Consistent spacing (24px padding)</text>
+  </g>
+  
+  <g transform="translate(420, 565)">
+    <circle cx="0" cy="0" r="3" fill="#3b82f6"/>
+    <text x="10" y="5" class="card-text">Semantic color borders for alerts</text>
+  </g>
+</svg>
