@@ -1,0 +1,538 @@
+/*!
+ * OpenCCU Modern UI Enhancements
+ * Version: 1.0.0
+ * Description: Modern, responsive design enhancements for OpenCCU WebUI
+ * License: Apache-2.0
+ */
+
+/* ========================================
+   CSS Variables for Easy Theming
+   ======================================== */
+
+:root {
+  /* Modern Color Palette */
+  --openccu-primary: #1e3a8a;
+  --openccu-primary-light: #3b82f6;
+  --openccu-primary-dark: #1e40af;
+  --openccu-secondary: #64748b;
+  --openccu-success: #10b981;
+  --openccu-warning: #f59e0b;
+  --openccu-danger: #ef4444;
+  --openccu-info: #3b82f6;
+  
+  /* Neutral Colors */
+  --openccu-gray-50: #f8fafc;
+  --openccu-gray-100: #f1f5f9;
+  --openccu-gray-200: #e2e8f0;
+  --openccu-gray-300: #cbd5e1;
+  --openccu-gray-700: #334155;
+  --openccu-gray-900: #1e293b;
+  
+  /* Spacing */
+  --openccu-spacing-xs: 0.25rem;
+  --openccu-spacing-sm: 0.5rem;
+  --openccu-spacing-md: 1rem;
+  --openccu-spacing-lg: 1.5rem;
+  --openccu-spacing-xl: 2rem;
+  
+  /* Border Radius */
+  --openccu-radius-sm: 0.375rem;
+  --openccu-radius-md: 0.5rem;
+  --openccu-radius-lg: 0.75rem;
+  --openccu-radius-full: 9999px;
+  
+  /* Shadows */
+  --openccu-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --openccu-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --openccu-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --openccu-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Typography */
+  --openccu-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --openccu-font-size-xs: 0.75rem;
+  --openccu-font-size-sm: 0.875rem;
+  --openccu-font-size-base: 0.95rem;
+  --openccu-font-size-lg: 1.125rem;
+  --openccu-font-size-xl: 1.25rem;
+  --openccu-font-size-2xl: 1.5rem;
+  
+  /* Transitions */
+  --openccu-transition: all 0.2s ease;
+}
+
+/* ========================================
+   Global Modern Styling
+   ======================================== */
+
+.openccu-modern {
+  font-family: var(--openccu-font-family);
+  font-size: var(--openccu-font-size-base);
+  color: var(--openccu-gray-900);
+  line-height: 1.5;
+}
+
+/* ========================================
+   Modern Card Components
+   ======================================== */
+
+.openccu-card {
+  background: white;
+  border-radius: var(--openccu-radius-lg);
+  box-shadow: var(--openccu-shadow-sm);
+  border: 1px solid var(--openccu-gray-200);
+  padding: var(--openccu-spacing-lg);
+  margin-bottom: var(--openccu-spacing-lg);
+  transition: var(--openccu-transition);
+}
+
+.openccu-card:hover {
+  box-shadow: var(--openccu-shadow-md);
+  transform: translateY(-2px);
+}
+
+.openccu-card-header {
+  font-size: var(--openccu-font-size-xl);
+  font-weight: 600;
+  color: var(--openccu-gray-900);
+  margin-bottom: var(--openccu-spacing-md);
+  padding-bottom: var(--openccu-spacing-md);
+  border-bottom: 2px solid var(--openccu-gray-200);
+}
+
+.openccu-card-body {
+  padding: var(--openccu-spacing-md) 0;
+}
+
+.openccu-card-footer {
+  margin-top: var(--openccu-spacing-md);
+  padding-top: var(--openccu-spacing-md);
+  border-top: 1px solid var(--openccu-gray-200);
+}
+
+/* ========================================
+   Modern Button Styles
+   ======================================== */
+
+.openccu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--openccu-spacing-sm) var(--openccu-spacing-lg);
+  font-size: var(--openccu-font-size-base);
+  font-weight: 500;
+  line-height: 1.5;
+  border-radius: var(--openccu-radius-md);
+  border: none;
+  cursor: pointer;
+  transition: var(--openccu-transition);
+  text-decoration: none;
+  box-shadow: var(--openccu-shadow-sm);
+}
+
+.openccu-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--openccu-shadow-md);
+}
+
+.openccu-btn:active {
+  transform: translateY(0);
+}
+
+.openccu-btn-primary {
+  background: linear-gradient(180deg, var(--openccu-primary-light) 0%, var(--openccu-primary) 100%);
+  color: white;
+}
+
+.openccu-btn-primary:hover {
+  background: linear-gradient(180deg, var(--openccu-primary) 0%, var(--openccu-primary-dark) 100%);
+}
+
+.openccu-btn-secondary {
+  background: linear-gradient(180deg, var(--openccu-gray-100) 0%, var(--openccu-gray-200) 100%);
+  color: var(--openccu-gray-900);
+}
+
+.openccu-btn-success {
+  background: var(--openccu-success);
+  color: white;
+}
+
+.openccu-btn-warning {
+  background: var(--openccu-warning);
+  color: white;
+}
+
+.openccu-btn-danger {
+  background: var(--openccu-danger);
+  color: white;
+}
+
+.openccu-btn-sm {
+  padding: var(--openccu-spacing-xs) var(--openccu-spacing-md);
+  font-size: var(--openccu-font-size-sm);
+}
+
+.openccu-btn-lg {
+  padding: var(--openccu-spacing-md) var(--openccu-spacing-xl);
+  font-size: var(--openccu-font-size-lg);
+}
+
+/* ========================================
+   Modern Form Elements
+   ======================================== */
+
+.openccu-form-group {
+  margin-bottom: var(--openccu-spacing-lg);
+}
+
+.openccu-form-label {
+  display: block;
+  margin-bottom: var(--openccu-spacing-sm);
+  font-weight: 500;
+  color: var(--openccu-gray-900);
+  font-size: var(--openccu-font-size-sm);
+}
+
+.openccu-form-input,
+.openccu-form-select,
+.openccu-form-textarea {
+  width: 100%;
+  padding: var(--openccu-spacing-sm) var(--openccu-spacing-md);
+  border: 1px solid var(--openccu-gray-300);
+  border-radius: var(--openccu-radius-md);
+  font-size: var(--openccu-font-size-base);
+  transition: var(--openccu-transition);
+  background-color: white;
+}
+
+.openccu-form-input:focus,
+.openccu-form-select:focus,
+.openccu-form-textarea:focus {
+  outline: none;
+  border-color: var(--openccu-primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.openccu-form-input:disabled,
+.openccu-form-select:disabled,
+.openccu-form-textarea:disabled {
+  background-color: var(--openccu-gray-100);
+  cursor: not-allowed;
+}
+
+/* ========================================
+   Modern Badge Components
+   ======================================== */
+
+.openccu-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--openccu-spacing-xs) var(--openccu-spacing-md);
+  font-size: var(--openccu-font-size-xs);
+  font-weight: 500;
+  border-radius: var(--openccu-radius-full);
+  line-height: 1;
+}
+
+.openccu-badge-primary {
+  background-color: var(--openccu-primary);
+  color: white;
+}
+
+.openccu-badge-success {
+  background-color: var(--openccu-success);
+  color: white;
+}
+
+.openccu-badge-warning {
+  background-color: var(--openccu-warning);
+  color: white;
+}
+
+.openccu-badge-danger {
+  background-color: var(--openccu-danger);
+  color: white;
+}
+
+.openccu-badge-secondary {
+  background-color: var(--openccu-secondary);
+  color: white;
+}
+
+/* ========================================
+   Modern Alert Components
+   ======================================== */
+
+.openccu-alert {
+  padding: var(--openccu-spacing-md) var(--openccu-spacing-lg);
+  border-radius: var(--openccu-radius-md);
+  margin-bottom: var(--openccu-spacing-md);
+  border-left: 4px solid;
+}
+
+.openccu-alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-color: var(--openccu-success);
+  color: #065f46;
+}
+
+.openccu-alert-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  border-color: var(--openccu-warning);
+  color: #92400e;
+}
+
+.openccu-alert-danger {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--openccu-danger);
+  color: #991b1b;
+}
+
+.openccu-alert-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: var(--openccu-info);
+  color: #1e40af;
+}
+
+/* ========================================
+   Modern Table Styles
+   ======================================== */
+
+.openccu-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--openccu-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--openccu-shadow-sm);
+  background: white;
+}
+
+.openccu-table thead {
+  background-color: var(--openccu-gray-50);
+}
+
+.openccu-table thead th {
+  padding: var(--openccu-spacing-md) var(--openccu-spacing-lg);
+  font-weight: 600;
+  color: var(--openccu-gray-900);
+  text-align: left;
+  border-bottom: 2px solid var(--openccu-gray-200);
+}
+
+.openccu-table tbody td {
+  padding: var(--openccu-spacing-md) var(--openccu-spacing-lg);
+  border-bottom: 1px solid var(--openccu-gray-200);
+}
+
+.openccu-table tbody tr:hover {
+  background-color: var(--openccu-gray-50);
+}
+
+.openccu-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========================================
+   Modern Navigation/Tabs
+   ======================================== */
+
+.openccu-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--openccu-gray-200);
+  margin-bottom: var(--openccu-spacing-lg);
+}
+
+.openccu-tab {
+  padding: var(--openccu-spacing-md) var(--openccu-spacing-lg);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--openccu-gray-700);
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: var(--openccu-transition);
+}
+
+.openccu-tab:hover {
+  color: var(--openccu-primary);
+  background-color: var(--openccu-gray-50);
+}
+
+.openccu-tab.active {
+  color: var(--openccu-primary);
+  border-bottom-color: var(--openccu-primary);
+}
+
+/* ========================================
+   Modern Modal/Dialog
+   ======================================== */
+
+.openccu-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.openccu-modal {
+  background: white;
+  border-radius: var(--openccu-radius-lg);
+  box-shadow: var(--openccu-shadow-xl);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+
+.openccu-modal-header {
+  padding: var(--openccu-spacing-lg);
+  border-bottom: 1px solid var(--openccu-gray-200);
+  background: linear-gradient(135deg, var(--openccu-primary) 0%, var(--openccu-primary-dark) 100%);
+  color: white;
+  border-radius: var(--openccu-radius-lg) var(--openccu-radius-lg) 0 0;
+}
+
+.openccu-modal-title {
+  font-size: var(--openccu-font-size-xl);
+  font-weight: 600;
+  margin: 0;
+}
+
+.openccu-modal-body {
+  padding: var(--openccu-spacing-lg);
+}
+
+.openccu-modal-footer {
+  padding: var(--openccu-spacing-lg);
+  border-top: 1px solid var(--openccu-gray-200);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--openccu-spacing-sm);
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+
+.openccu-shadow-sm { box-shadow: var(--openccu-shadow-sm) !important; }
+.openccu-shadow-md { box-shadow: var(--openccu-shadow-md) !important; }
+.openccu-shadow-lg { box-shadow: var(--openccu-shadow-lg) !important; }
+
+.openccu-rounded-sm { border-radius: var(--openccu-radius-sm) !important; }
+.openccu-rounded-md { border-radius: var(--openccu-radius-md) !important; }
+.openccu-rounded-lg { border-radius: var(--openccu-radius-lg) !important; }
+
+.openccu-text-center { text-align: center !important; }
+.openccu-text-right { text-align: right !important; }
+.openccu-text-left { text-align: left !important; }
+
+.openccu-mt-sm { margin-top: var(--openccu-spacing-sm) !important; }
+.openccu-mt-md { margin-top: var(--openccu-spacing-md) !important; }
+.openccu-mt-lg { margin-top: var(--openccu-spacing-lg) !important; }
+
+.openccu-mb-sm { margin-bottom: var(--openccu-spacing-sm) !important; }
+.openccu-mb-md { margin-bottom: var(--openccu-spacing-md) !important; }
+.openccu-mb-lg { margin-bottom: var(--openccu-spacing-lg) !important; }
+
+.openccu-p-sm { padding: var(--openccu-spacing-sm) !important; }
+.openccu-p-md { padding: var(--openccu-spacing-md) !important; }
+.openccu-p-lg { padding: var(--openccu-spacing-lg) !important; }
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+  .openccu-card {
+    padding: var(--openccu-spacing-md);
+  }
+  
+  .openccu-btn {
+    width: 100%;
+    margin-bottom: var(--openccu-spacing-sm);
+  }
+  
+  .openccu-modal {
+    max-width: 95%;
+    margin: var(--openccu-spacing-md);
+  }
+  
+  .openccu-table thead th,
+  .openccu-table tbody td {
+    padding: var(--openccu-spacing-sm);
+  }
+}
+
+/* ========================================
+   Accessibility Improvements
+   ======================================== */
+
+:focus-visible {
+  outline: 2px solid var(--openccu-primary-light);
+  outline-offset: 2px;
+}
+
+.openccu-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ========================================
+   Loading States
+   ======================================== */
+
+.openccu-loading {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid var(--openccu-gray-200);
+  border-top-color: var(--openccu-primary);
+  border-radius: 50%;
+  animation: openccu-spin 0.8s linear infinite;
+}
+
+@keyframes openccu-spin {
+  to { transform: rotate(360deg); }
+}
+
+.openccu-skeleton {
+  background: linear-gradient(90deg, var(--openccu-gray-200) 25%, var(--openccu-gray-100) 50%, var(--openccu-gray-200) 75%);
+  background-size: 200% 100%;
+  animation: openccu-shimmer 1.5s infinite;
+  border-radius: var(--openccu-radius-md);
+}
+
+@keyframes openccu-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ========================================
+   Dark Mode Support (Future Enhancement)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --openccu-gray-50: #1e293b;
+    --openccu-gray-100: #334155;
+    --openccu-gray-200: #475569;
+    --openccu-gray-900: #f8fafc;
+  }
+  
+  /* Additional dark mode styles can be added here */
+}

@@ -1,0 +1,137 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 28px; font-weight: 600; fill: #1e293b; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: 500; fill: #64748b; }
+      .btn-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 500; fill: white; }
+      .btn-text-secondary { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; font-weight: 500; fill: #1e293b; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #64748b; }
+      
+      /* Shadow definitions */
+      .shadow-sm { filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1)); }
+      .shadow-md { filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1)); }
+    </style>
+    
+    <!-- Gradient definitions -->
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="success-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="warning-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="danger-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="secondary-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f1f5f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e2e8f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="450" y="50" text-anchor="middle" class="title">OpenCCU Modern Button Components</text>
+  <text x="450" y="75" text-anchor="middle" class="subtitle">Interactive, accessible, and beautiful</text>
+  
+  <!-- Standard Size Buttons -->
+  <text x="50" y="120" class="subtitle">Standard Buttons</text>
+  
+  <!-- Primary Button -->
+  <g class="shadow-sm">
+    <rect x="50" y="140" width="140" height="40" rx="8" fill="url(#primary-gradient)"/>
+    <text x="120" y="165" text-anchor="middle" class="btn-text">Primary Button</text>
+  </g>
+  <text x="120" y="195" text-anchor="middle" class="label">Primary Action</text>
+  
+  <!-- Success Button -->
+  <g class="shadow-sm">
+    <rect x="210" y="140" width="140" height="40" rx="8" fill="url(#success-gradient)"/>
+    <text x="280" y="165" text-anchor="middle" class="btn-text">Success</text>
+  </g>
+  <text x="280" y="195" text-anchor="middle" class="label">Positive Action</text>
+  
+  <!-- Warning Button -->
+  <g class="shadow-sm">
+    <rect x="370" y="140" width="140" height="40" rx="8" fill="url(#warning-gradient)"/>
+    <text x="440" y="165" text-anchor="middle" class="btn-text">Warning</text>
+  </g>
+  <text x="440" y="195" text-anchor="middle" class="label">Caution</text>
+  
+  <!-- Danger Button -->
+  <g class="shadow-sm">
+    <rect x="530" y="140" width="140" height="40" rx="8" fill="url(#danger-gradient)"/>
+    <text x="600" y="165" text-anchor="middle" class="btn-text">Danger</text>
+  </g>
+  <text x="600" y="195" text-anchor="middle" class="label">Destructive</text>
+  
+  <!-- Secondary Button -->
+  <g class="shadow-sm">
+    <rect x="690" y="140" width="140" height="40" rx="8" fill="url(#secondary-gradient)"/>
+    <text x="760" y="165" text-anchor="middle" class="btn-text-secondary">Secondary</text>
+  </g>
+  <text x="760" y="195" text-anchor="middle" class="label">Alternative</text>
+  
+  <!-- Button Sizes -->
+  <text x="50" y="250" class="subtitle">Button Sizes</text>
+  
+  <!-- Small Button -->
+  <g class="shadow-sm">
+    <rect x="50" y="270" width="100" height="32" rx="6" fill="url(#primary-gradient)"/>
+    <text x="100" y="290" text-anchor="middle" class="btn-text" font-size="13px">Small</text>
+  </g>
+  <text x="100" y="315" text-anchor="middle" class="label">Small (32px)</text>
+  
+  <!-- Default Button -->
+  <g class="shadow-sm">
+    <rect x="170" y="270" width="120" height="40" rx="8" fill="url(#primary-gradient)"/>
+    <text x="230" y="295" text-anchor="middle" class="btn-text">Default</text>
+  </g>
+  <text x="230" y="323" text-anchor="middle" class="label">Default (40px)</text>
+  
+  <!-- Large Button -->
+  <g class="shadow-sm">
+    <rect x="310" y="270" width="160" height="48" rx="8" fill="url(#primary-gradient)"/>
+    <text x="390" y="299" text-anchor="middle" class="btn-text">Large Button</text>
+  </g>
+  <text x="390" y="331" text-anchor="middle" class="label">Large (48px)</text>
+  
+  <!-- Hover State Visualization -->
+  <text x="50" y="380" class="subtitle">Hover State (Elevated)</text>
+  
+  <!-- Normal State -->
+  <g class="shadow-sm">
+    <rect x="50" y="400" width="140" height="40" rx="8" fill="url(#primary-gradient)"/>
+    <text x="120" y="425" text-anchor="middle" class="btn-text">Normal</text>
+  </g>
+  <text x="120" y="455" text-anchor="middle" class="label">Default State</text>
+  
+  <!-- Hover State (with transform effect) -->
+  <g class="shadow-md" transform="translate(0, -2)">
+    <rect x="210" y="400" width="140" height="40" rx="8" fill="#2563eb"/>
+    <text x="280" y="425" text-anchor="middle" class="btn-text">Hover</text>
+  </g>
+  <text x="280" y="455" text-anchor="middle" class="label">On Hover (lifted)</text>
+  
+  <!-- Features List -->
+  <g transform="translate(500, 370)">
+    <text x="0" y="0" class="subtitle">Key Features:</text>
+    <text x="0" y="25" class="label">✓ Smooth 0.2s transitions</text>
+    <text x="0" y="45" class="label">✓ GPU-accelerated animations</text>
+    <text x="0" y="65" class="label">✓ Clear focus indicators</text>
+    <text x="0" y="85" class="label">✓ Accessible (WCAG 2.1 AA)</text>
+    <text x="0" y="105" class="label">✓ Touch-friendly (44px min)</text>
+  </g>
+</svg>

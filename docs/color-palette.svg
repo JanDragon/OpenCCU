@@ -1,0 +1,88 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 24px; font-weight: 600; fill: #1e293b; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 14px; font-weight: 500; fill: #1e293b; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; fill: #64748b; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" class="title">OpenCCU Modern Color Palette</text>
+  
+  <!-- Primary Colors Section -->
+  <text x="50" y="80" class="subtitle">Primary Colors</text>
+  
+  <!-- Primary -->
+  <rect x="50" y="90" width="100" height="80" rx="8" fill="#1e3a8a"/>
+  <text x="100" y="185" text-anchor="middle" class="label">Primary</text>
+  <text x="100" y="200" text-anchor="middle" class="label">#1e3a8a</text>
+  
+  <!-- Primary Light -->
+  <rect x="170" y="90" width="100" height="80" rx="8" fill="#3b82f6"/>
+  <text x="220" y="185" text-anchor="middle" class="label">Primary Light</text>
+  <text x="220" y="200" text-anchor="middle" class="label">#3b82f6</text>
+  
+  <!-- Primary Dark -->
+  <rect x="290" y="90" width="100" height="80" rx="8" fill="#1e40af"/>
+  <text x="340" y="185" text-anchor="middle" class="label">Primary Dark</text>
+  <text x="340" y="200" text-anchor="middle" class="label">#1e40af</text>
+  
+  <!-- Semantic Colors Section -->
+  <text x="50" y="240" class="subtitle">Semantic Colors</text>
+  
+  <!-- Success -->
+  <rect x="50" y="250" width="100" height="80" rx="8" fill="#10b981"/>
+  <text x="100" y="345" text-anchor="middle" class="label">Success</text>
+  <text x="100" y="360" text-anchor="middle" class="label">#10b981</text>
+  
+  <!-- Warning -->
+  <rect x="170" y="250" width="100" height="80" rx="8" fill="#f59e0b"/>
+  <text x="220" y="345" text-anchor="middle" class="label">Warning</text>
+  <text x="220" y="360" text-anchor="middle" class="label">#f59e0b</text>
+  
+  <!-- Danger -->
+  <rect x="290" y="250" width="100" height="80" rx="8" fill="#ef4444"/>
+  <text x="340" y="345" text-anchor="middle" class="label">Danger</text>
+  <text x="340" y="360" text-anchor="middle" class="label">#ef4444</text>
+  
+  <!-- Info -->
+  <rect x="410" y="250" width="100" height="80" rx="8" fill="#3b82f6"/>
+  <text x="460" y="345" text-anchor="middle" class="label">Info</text>
+  <text x="460" y="360" text-anchor="middle" class="label">#3b82f6</text>
+  
+  <!-- Secondary -->
+  <rect x="530" y="250" width="100" height="80" rx="8" fill="#64748b"/>
+  <text x="580" y="345" text-anchor="middle" class="label">Secondary</text>
+  <text x="580" y="360" text-anchor="middle" class="label">#64748b</text>
+  
+  <!-- Neutral Colors Section -->
+  <text x="450" y="80" class="subtitle">Neutral Grays</text>
+  
+  <!-- Gray 50 -->
+  <rect x="450" y="90" width="60" height="60" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="480" y="165" text-anchor="middle" class="label">50</text>
+  
+  <!-- Gray 100 -->
+  <rect x="520" y="90" width="60" height="60" rx="6" fill="#f1f5f9"/>
+  <text x="550" y="165" text-anchor="middle" class="label">100</text>
+  
+  <!-- Gray 200 -->
+  <rect x="590" y="90" width="60" height="60" rx="6" fill="#e2e8f0"/>
+  <text x="620" y="165" text-anchor="middle" class="label">200</text>
+  
+  <!-- Gray 300 -->
+  <rect x="660" y="90" width="60" height="60" rx="6" fill="#cbd5e1"/>
+  <text x="690" y="165" text-anchor="middle" class="label">300</text>
+  
+  <!-- Gray 700 -->
+  <rect x="450" y="180" width="60" height="60" rx="6" fill="#334155"/>
+  <text x="480" y="255" text-anchor="middle" class="label" fill="#f8fafc">700</text>
+  
+  <!-- Gray 900 -->
+  <rect x="520" y="180" width="60" height="60" rx="6" fill="#1e293b"/>
+  <text x="550" y="255" text-anchor="middle" class="label" fill="#f8fafc">900</text>
+</svg>
