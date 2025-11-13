@@ -1,12 +1,5 @@
-/*!
- * OpenCCU Modern UI Enhancements
- * Version: 1.0.0
- * Description: Modern, responsive design enhancements for OpenCCU WebUI
- * License: Apache-2.0
- */
-
 /* ========================================
-   CSS Variables for Easy Theming
+   CSS Variables for Theming
    ======================================== */
 
 :root {
@@ -61,7 +54,7 @@
 }
 
 /* ========================================
-   Global Modern Styling
+   Global Styling
    ======================================== */
 
 .openccu-modern {
@@ -72,7 +65,7 @@
 }
 
 /* ========================================
-   Modern Card Components
+   Card Components
    ======================================== */
 
 .openccu-card {
@@ -110,7 +103,7 @@
 }
 
 /* ========================================
-   Modern Button Styles
+   Button Styles
    ======================================== */
 
 .openccu-btn {
@@ -178,7 +171,7 @@
 }
 
 /* ========================================
-   Modern Form Elements
+   Form Elements
    ======================================== */
 
 .openccu-form-group {
@@ -221,7 +214,7 @@
 }
 
 /* ========================================
-   Modern Badge Components
+   Badge Components
    ======================================== */
 
 .openccu-badge {
@@ -260,7 +253,7 @@
 }
 
 /* ========================================
-   Modern Alert Components
+   Alert Components
    ======================================== */
 
 .openccu-alert {
@@ -295,7 +288,7 @@
 }
 
 /* ========================================
-   Modern Table Styles
+   Table Styles
    ======================================== */
 
 .openccu-table {
@@ -334,7 +327,7 @@
 }
 
 /* ========================================
-   Modern Navigation/Tabs
+   Navigation/Tabs
    ======================================== */
 
 .openccu-tabs {
@@ -366,7 +359,7 @@
 }
 
 /* ========================================
-   Modern Modal/Dialog
+   Modal/Dialog
    ======================================== */
 
 .openccu-modal-overlay {

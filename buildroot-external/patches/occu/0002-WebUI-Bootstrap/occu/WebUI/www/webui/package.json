@@ -1,7 +1,7 @@
 {
     "name": "webui-bootstrap",
     "version": "1.0.0",
-    "description": "OpenCCU Modern WebUI with Bootstrap 5",
+    "description": "",
     "main": "webui.js",
     "scripts": {
         "build:css": "sass --style=compressed scss/main.scss css/extern/main.min.css",

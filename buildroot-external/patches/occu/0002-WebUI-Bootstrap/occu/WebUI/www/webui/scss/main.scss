@@ -1,14 +1,13 @@
 // webui-main.scss
-// Modern OpenCCU WebUI Styling
 // compile it on the command line as follows:
 // cd /www/webui
 // ./node_modules/.bin/sass --style=compressed scss/main.scss css/extern/main.min.css
 
 // ========================================
-// Modern Design System Variables
+// Design System Variables
 // ========================================
 
-// Modern Color Palette
+// Color Palette
 $primary: #1e3a8a;        // Deep blue - more modern than old #192c6e
 $secondary: #64748b;       // Slate gray - better contrast
 $success: #10b981;         // Modern green
@@ -18,14 +17,14 @@ $danger: #ef4444;         // Modern red
 $light: #f8fafc;          // Very light gray
 $dark: #1e293b;           // Dark slate
 
-// Modern Typography
+// Typography
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-size-base: 0.95rem;
 $line-height-base: 1.5;
 $headings-font-weight: 600;
 $headings-line-height: 1.2;
 
-// Modern Spacing
+// Spacing
 $spacer: 1rem;
 $spacers: (
   0: 0,
@@ -36,7 +35,7 @@ $spacers: (
   5: $spacer * 3,
 );
 
-// Modern Borders & Shadows
+// Borders & Shadows
 $border-radius: 0.5rem;
 $border-radius-sm: 0.375rem;
 $border-radius-lg: 0.75rem;
@@ -47,7 +46,7 @@ $box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 $box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 $box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
-// Modern Component Styles
+// Component Styles
 $btn-border-radius: $border-radius-sm;
 $input-border-radius: $border-radius-sm;
 $card-border-radius: $border-radius;
@@ -78,7 +77,7 @@ $hr-opacity: 0.25;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // ========================================
-// Custom Modern Enhancements
+// Custom Enhancements
 // ========================================
 
 // Smooth transitions
@@ -86,7 +85,7 @@ $hr-opacity: 0.25;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-// Modern card styling
+// card styling
 .card {
   box-shadow: $box-shadow-sm;
   border: 1px solid $border-color;
@@ -96,7 +95,7 @@ $hr-opacity: 0.25;
   }
 }
 
-// Modern button enhancements
+// button enhancements
 .btn {
   font-weight: 500;
   letter-spacing: 0.025em;
@@ -112,7 +111,7 @@ $hr-opacity: 0.25;
   }
 }
 
-// Modern form controls
+// form controls
 .form-control,
 .form-select {
   border-color: $border-color;
@@ -123,7 +122,7 @@ $hr-opacity: 0.25;
   }
 }
 
-// Modern table styling
+// table styling
 .table {
   border-color: $border-color;
   
@@ -139,7 +138,7 @@ $hr-opacity: 0.25;
   }
 }
 
-// Modern navigation
+// navigation
 .nav-link {
   border-radius: $border-radius-sm;
   
@@ -148,13 +147,13 @@ $hr-opacity: 0.25;
   }
 }
 
-// Badge modernization
+// Badge
 .badge {
   font-weight: 500;
   padding: 0.35em 0.65em;
 }
 
-// Modern alerts
+// alerts
 .alert {
   border-left: 4px solid;
   border-radius: $border-radius-sm;
@@ -171,7 +170,7 @@ html {
   scroll-behavior: smooth;
 }
 
-// Modern utility classes
+// utility classes
 .shadow-modern {
   box-shadow: $box-shadow !important;
 }
