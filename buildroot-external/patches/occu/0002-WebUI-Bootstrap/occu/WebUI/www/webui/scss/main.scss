@@ -1,60 +1,191 @@
 // webui-main.scss
-
-// compile it on the command line as follows::after
+// compile it on the command line as follows:
 // cd /www/webui
 // ./node_modules/.bin/sass --style=compressed scss/main.scss css/extern/main.min.css
 
-// 0. Include any default variable overrides here (though functions won't be available)
+// ========================================
+// Design System Variables
+// ========================================
 
-$primary: #192c6e;
-$secondary: #89989b;
+// Color Palette
+$primary: #1e3a8a;        // Deep blue - more modern than old #192c6e
+$secondary: #64748b;       // Slate gray - better contrast
+$success: #10b981;         // Modern green
+$info: #3b82f6;           // Bright blue
+$warning: #f59e0b;        // Amber
+$danger: #ef4444;         // Modern red
+$light: #f8fafc;          // Very light gray
+$dark: #1e293b;           // Dark slate
 
-// Option B: Include parts of Bootstrap
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
+// Typography
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-base: 0.95rem;
+$line-height-base: 1.5;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
 
-// 2. Include any default variable overrides here
-
-// 3. Include remainder of required Bootstrap stylesheets
-@import "../node_modules/bootstrap/scss/variables";
-// @import "../node_modules/bootstrap/scss/mixins";
-// @import "../node_modules/bootstrap/scss/root";
-
-// 4. Include any optional Bootstrap CSS as needed
-// @import "../node_modules/bootstrap/scss/utilities";
-// @import "../node_modules/bootstrap/scss/reboot";
-// @import "../node_modules/bootstrap/scss/type";
-// @import "../node_modules/bootstrap/scss/images";
-// @import "../node_modules/bootstrap/scss/containers";
-// @import "../node_modules/bootstrap/scss/grid";
-// @import "../node_modules/bootstrap/scss/helpers";
-
-// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
-// @import "../node_modules/bootstrap/scss/utilities/api";
-
-// 6. Add additional custom code here
-
-// Create our own color.map
-$colormap-colors: (
-    "webui-active":                  #3678c9,
-    "webui-attention":               #ff0000,
-    "webui-background":              #192c6e,
-    "webui-okSignal":                #00c300,
-    "webui-warnSignal":              #ffff00,
-    "webui-borderColor":             #f0f0f0
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
 );
 
-// use same line height standard like CCU WebUI (normal)
-$line-height-base: 1.2;
+// Borders & Shadows
+$border-radius: 0.5rem;
+$border-radius-sm: 0.375rem;
+$border-radius-lg: 0.75rem;
+$border-color: #e2e8f0;
 
-// set hr-opacity to 1.0
-$hr-opacity: 1.0;
+// Box shadows for depth
+$box-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
-// set headings font weight to bold
-$headings-font-weight: bold;
+// Component Styles
+$btn-border-radius: $border-radius-sm;
+$input-border-radius: $border-radius-sm;
+$card-border-radius: $border-radius;
 
-// Merge the maps
+// Import Bootstrap functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Import Bootstrap variables
+@import "../node_modules/bootstrap/scss/variables";
+
+// Create custom color map for OpenCCU specific colors
+$colormap-colors: (
+    "webui-active":      #3b82f6,
+    "webui-attention":   #ef4444,
+    "webui-background":  #1e3a8a,
+    "webui-okSignal":    #10b981,
+    "webui-warnSignal":  #f59e0b,
+    "webui-borderColor": #e2e8f0
+);
+
+// Merge custom colors into theme
 $theme-colors: map-merge($theme-colors, $colormap-colors);
 
-// Option A: Include all of Bootstrap
+// Set hr opacity
+$hr-opacity: 0.25;
+
+// Import all of Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+// ========================================
+// Custom Enhancements
+// ========================================
+
+// Smooth transitions
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+// card styling
+.card {
+  box-shadow: $box-shadow-sm;
+  border: 1px solid $border-color;
+  
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+// button enhancements
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  box-shadow: $box-shadow-sm;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $box-shadow;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// form controls
+.form-control,
+.form-select {
+  border-color: $border-color;
+  
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.2rem rgba(30, 58, 138, 0.15);
+  }
+}
+
+// table styling
+.table {
+  border-color: $border-color;
+  
+  thead {
+    background-color: $light;
+    border-bottom: 2px solid $border-color;
+  }
+  
+  tbody tr {
+    &:hover {
+      background-color: rgba($primary, 0.03);
+    }
+  }
+}
+
+// navigation
+.nav-link {
+  border-radius: $border-radius-sm;
+  
+  &:hover {
+    background-color: rgba($primary, 0.05);
+  }
+}
+
+// Badge
+.badge {
+  font-weight: 500;
+  padding: 0.35em 0.65em;
+}
+
+// alerts
+.alert {
+  border-left: 4px solid;
+  border-radius: $border-radius-sm;
+}
+
+// Improved focus states for accessibility
+:focus-visible {
+  outline: 2px solid $primary;
+  outline-offset: 2px;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// utility classes
+.shadow-modern {
+  box-shadow: $box-shadow !important;
+}
+
+.shadow-modern-lg {
+  box-shadow: $box-shadow-lg !important;
+}
+
+.rounded-modern {
+  border-radius: $border-radius !important;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, $primary 0%, $info 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
